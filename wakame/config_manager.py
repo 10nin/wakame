@@ -1,6 +1,7 @@
 # coding=utf-8
 import toml
 
+
 class ConfigManager:
     def __init__(self, config_path):
         with open(config_path, 'r') as f:
