@@ -1,0 +1,4 @@
+work_dir = '.'
+deploy_dir = '.'
+template_path = 'templates'
+image_path = 'static/img'
