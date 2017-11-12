@@ -12,3 +12,7 @@ class HtmlConverter:
         d = core.publish_parts(rst, writer_name='html5')
         template = Template(template_str)
         return template.render(d)
+
+    def save_html(self, html, save_path):
+        with open(save_path, 'w') as f:
+            f.writelines(html)
