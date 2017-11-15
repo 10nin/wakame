@@ -3,10 +3,10 @@ from docutils import core
 from jinja2 import  Template
 
 class HtmlConverter:
-    def convert_to_html(self, rst_path, template_path):
+    def convert_to_html(self, rst_path, template_file_path):
         with open(rst_path, 'r') as f:
             rst = ''.join(f.readlines())
-        with open(template_path, 'r') as f:
+        with open(template_file_path, 'r') as f:
             template_str = ''.join(f.readlines())
 
         d = core.publish_parts(rst, writer_name='html5')
