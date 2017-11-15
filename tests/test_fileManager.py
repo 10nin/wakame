@@ -18,3 +18,11 @@ class TestFileManager(TestCase):
     def test_get_file_name_without_extension(self):
         key = 'test1'
         self.assertEqual(key, self.fm.get_basename(self.test_file_path[key]))
+
+    def test_get_files(self):
+        target_dir = 'test_files'
+        ext = 'rst'
+        expect = ['test1.rst', 'directive_test1.rst']
+        ans = self.fm.get_files(target_dir, ext)
+        for elm in ans:
+            self.assertTrue(elm in expect)
