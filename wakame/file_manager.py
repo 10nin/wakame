@@ -7,7 +7,7 @@ from pathlib import Path
 class FileManager:
 
     def get_files(self, target_dir, ext):
-        return [e.name for e in Path(target_dir).glob('*.' + ext)]
+        return [str(e) for e in Path(target_dir).glob('*.' + ext)]
 
     def get_hash(self, file_path):
         with open(file_path, 'r') as f:

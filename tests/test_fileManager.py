@@ -22,7 +22,7 @@ class TestFileManager(TestCase):
     def test_get_files(self):
         target_dir = 'test_files'
         ext = 'rst'
-        expect = ['test1.rst', 'directive_test1.rst']
+        expect = ['test_files/test1.rst', 'test_files/directive_test1.rst']
         ans = self.fm.get_files(target_dir, ext)
-        for elm in ans:
-            self.assertTrue(elm in expect)
+        for a in sorted(ans):
+            self.assertTrue(a in expect)

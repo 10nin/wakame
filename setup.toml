@@ -1,4 +1,5 @@
-work_dir = '.'
+article_dir = 'test_files'
 deploy_dir = '.'
 template_path = 'templates'
 image_path = 'static/img'
+article_ext = 'rst'
